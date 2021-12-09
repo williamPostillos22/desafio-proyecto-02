@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    font-family: "Poppins", sans-serif;
+    background-color: rgb(255, 255, 255);
+    font-size: 1rem;
+}
+.header {
+    margin-bottom: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .header .logo {
+    margin: 0 2rem;
+    align-self: center;
+  }
+  .header .logo img {
+    width: 75px;
+    border-radius: 50%;
+    border: 2px solid rgb(255, 0, 0);
+    box-sizing: border-box;
+  }
+  .galeria {
+    display: flex;
+    justify-content: center;
+    margin: 3% 0;
+  }
+  
+  .padre {
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    grid-template-areas:
+      ". . ."
+      ". central ."
+      ". . .";
+  }
+  
+  .padre img {
+    width: 100%;
+    height: 100%;
+    /* background-size: cover; */
+    object-fit: cover;
+    border: 2px solid rgb(187, 69, 69);
+  }
+  
+  .fotoPrincipal {
+    grid-area: central;
+  }
+  
+  .doble {
+    grid-column: span 2;
+  }
+  
+  .dobleh {
+    grid-row: span 2;
+  }
+  
+  #footer{    
+    color: black;
+	height: auto;
+	background-color: rgb(224, 220, 220);
+    padding: 8px;
+    font-family: Roboto;  
+}
+/*MEDIA QUERIES MOBILE*/
+@media all and (max-width: 568px) {
+  body {
+    font-size: 1.25rem;
+  }  
+  .header {
+    flex-direction: column;
+  }
+  .header .logo {
+    margin: 0 2rem;
+  }
+  .contenidoPrincipal {
+      margin: 5rem 1rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }  
+    .contenidoPrincipal img {
+        width: 80%;
+        height: 80%;
+        padding-left: 10%;
+    } 
+    .contenidoPrincipal p {
+      width: 80%;
+      max-height: 50rem;
+      padding: 15px;
+      margin: 0 10%;
+      border: 2px solid rgb(255, 0, 0);
+      box-sizing: border-box;
+    }
+    .subTitle{
+      text-align: center;
+      font-family: Robotto;
+      font-weight: lighter;   
+  } 
+  #footer{    
+      color: black;
+      height: auto;
+      background-color: rgb(224, 220, 220);
+      padding: 8px;
+      font-family: Roboto;  
+  }
+}
